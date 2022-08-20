@@ -1,0 +1,34 @@
+body {
+    box-sizing: border-box;
+    font-family: $font-text;
+    font-size: $font-size;
+    line-height: 1.42857143;
+    color: black;
+    }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 768px;
+    padding: 0px 18px 0px 18px;
+}
+
+.container--restaurants {
+    max-width: 768px;
+    padding: 0px 18px 0px 18px;
+    background-color: $color-quaternary;
+}
+                    
+a {
+    text-decoration: none;
+    color: black
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}

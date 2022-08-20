@@ -1,0 +1,17 @@
+%button {
+    background: linear-gradient($color-secondary, $color-primary);
+    border-radius: $border-radius;
+    color: white;
+    padding: 10px 4px 10px 4px;
+    margin: 0px 100px 0px 100px;
+}
+
+%functioning {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-quaternary;
+    border-radius: $border-radius;
+    padding: 10px 140px 10px 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

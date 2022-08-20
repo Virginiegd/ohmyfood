@@ -1,0 +1,11 @@
+.order {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    .order__button{
+        @extend %button;
+        text-align: center;
+    }
+    .order__color {
+        color: white;
+    }
+}

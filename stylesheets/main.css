@@ -1,0 +1,226 @@
+.order .order__button, .info .info__button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 20px;
+  color: white;
+  padding: 10px 4px 10px 4px;
+  margin: 0px 100px 0px 100px;
+}
+
+.functioning .functioning__taste, .functioning .functioning__compose, .functioning .functioning__choice {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f7f4f4;
+  border-radius: 20px;
+  padding: 10px 140px 10px 0px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 768px;
+  padding: 0px 18px 0px 18px;
+}
+
+.container--restaurants {
+  max-width: 768px;
+  padding: 0px 18px 0px 18px;
+  background-color: #f7f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+header .header__contend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header .header__arrow {
+  position: relative;
+  right: 70px;
+}
+header .header__logo {
+  width: 250px;
+  margin-top: 10px;
+}
+
+footer .footer__contend {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+footer .footer__logo {
+  width: 130px;
+  filter: invert(100%);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+footer .footer__nav {
+  color: white;
+}
+
+.presentation .presentation__frame {
+  height: 250px;
+  position: relative;
+}
+.presentation .presentation__img {
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+  height: 290px;
+}
+.presentation .presentation__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: "Shrikhand", cursive;
+  position: relative;
+  background-color: #f7f4f4;
+  width: 100%;
+}
+
+.meal {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.meal h2 {
+  border-bottom: 3px solid #99E2D0;
+  margin-right: 400px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.meal .meal__restaurant {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 10px;
+  line-height: 0.5;
+}
+.meal .meal__restaurant .meal__price {
+  display: flex;
+  align-items: flex-end;
+}
+.meal .meal__restaurant .meal__check {
+  position: absolute;
+  visibility: hidden;
+}
+
+.info {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.info .info__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #e2dede;
+}
+.info .info__ico {
+  width: 10%;
+}
+.info .info__city {
+  width: 35%;
+  font-weight: bold;
+}
+.info .info__presentation {
+  background-color: #f7f4f4;
+  padding: 10px 0px 20px 0px;
+}
+.info .info__title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.functioning h2 {
+  font-weight: bold;
+}
+.functioning .functioning__number {
+  color: white;
+  border-radius: 20px;
+  background-color: #9356DC;
+  width: 22px;
+  text-align: center;
+  margin-left: -5px;
+}
+.functioning .functioning__color {
+  color: #9356DC;
+}
+
+.restaurants {
+  padding: 15px;
+  background-color: #f7f4f4;
+}
+.restaurants .restaurants__global {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .restaurants__img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+.restaurants .restaurants__new {
+  position: absolute;
+  right: 55px;
+  margin-top: 10px;
+  padding: 4px 6px 4px 6px;
+  background-color: #99E2D0;
+  color: #0e634e;
+  font-weight: bold;
+}
+.restaurants .restaurants__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0px 15px 15px 15px;
+  margin-bottom: 20px;
+}
+.restaurants .restaurants__body {
+  line-height: 0.5;
+}
+
+.order {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.order .order__button {
+  text-align: center;
+}
+.order .order__color {
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
