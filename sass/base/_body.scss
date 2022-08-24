@@ -1,5 +1,8 @@
-body {
+* {
     box-sizing: border-box;
+}
+
+body {
     font-family: $font-text;
     font-size: $font-size;
     line-height: 1.42857143;
@@ -11,14 +14,7 @@ img {
     height: auto;
 }
 
-.container {
-    max-width: 768px;
-    padding: 0px 18px 0px 18px;
-}
-
 .container--restaurants {
-    max-width: 768px;
-    padding: 0px 18px 0px 18px;
     background-color: $color-quaternary;
 }
                     

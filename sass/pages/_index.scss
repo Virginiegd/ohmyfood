@@ -1,43 +1,57 @@
 .info {
     text-align: center;
     font-family: $font-text;
+    margin-bottom: 20px;
     
     .info__location {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: $color-quinary;
+        background-color: $color-quinary;  
+        padding: 10px;
     }
     
     .info__ico {
+        padding: 30px;
         width: 10%;
     }
 
+    .info__help {
+        position: absolute;
+        visibility: hidden;
+    }
+
     .info__city {
-        width: 35%;
-        font-weight: bold;
-        }
+        background-color: $color-quinary;
+        border: 1px solid $color-quinary;
+    }
     
     .info__presentation {
         background-color: $color-quaternary;
-        padding: 10px 0px 20px 0px ;
+        padding: 10px 0px 50px 0px;
     }
-            
+          
     .info__title {
             font-weight: bold;
-            font-size: $font-size +8;
+            font-size: $font-size +10;
+            padding: 0px 60px;
             }
+
+    .info__text {
+        font-size: $font-size +2;
+        margin-bottom: 30px;
+        padding: 0px 20px;
+    }        
 
     .info__button {
             @extend %button;
-            }
+        }     
 }
 
 .functioning {
+    padding: 20px 30px;
+
     h2 {
         font-weight: bold;
     }
+
     .functioning__choice {
         @extend %functioning;
     }
@@ -45,19 +59,22 @@
     .functioning__compose {
         @extend %functioning;
     }
+
     .functioning__taste {
         @extend %functioning;
     }
+
     .functioning__number {
         color: white;
         border-radius: $border-radius;
         background-color: $color-primary;
         width: 22px;
         text-align: center;
-        margin-left: -5px;
+        margin-left: -8px;
     }
+
     .functioning__color {
-        color: $color-primary;
+        color: grey;
     } 
 }
 
@@ -65,22 +82,28 @@
     padding: 15px;
     background-color: $color-quaternary;
 
+    .restaurants__class {
+        display: block;
+    }
 
     .restaurants__global {
         display: flex;
         flex-direction: column;
     }
+    
     .restaurants__img {
+        position: relative;
         width: 100%;
         height: 200px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         object-fit: cover;
+        display: block;
     }
 
     .restaurants__new {
         position: absolute;
-        right: 55px;
+        right: 30px;
         margin-top: 10px;
         padding: 4px 6px 4px 6px;
         background-color: $color-tertiary;
@@ -97,8 +120,8 @@
         border-bottom-right-radius: 20px;
         padding: 0px 15px 15px 15px;
         margin-bottom: 20px;
-
     }
+
     .restaurants__body {
         line-height: 0.5;
     }
