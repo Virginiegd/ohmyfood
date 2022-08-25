@@ -1,19 +1,20 @@
-.order .order__button, .info .info__button {
+.info .info__button, .order .order__button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 20px;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 30px;
+  box-shadow: 0px 5px 5px #d2cfcf;
 }
 
 .functioning .functioning__taste, .functioning .functioning__compose, .functioning .functioning__choice {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f7f4f4;
+  align-content: flex-start;
+  background-color: #F6F6F6;
   border-radius: 20px;
   margin-bottom: 20px;
-  padding-right: 60px;
+  padding: 15px 10px 15px 0px;
   font-weight: bold;
+  box-shadow: 0px 5px 5px #e0dddd;
 }
 
 * {
@@ -33,7 +34,7 @@ img {
 }
 
 .container--restaurants {
-  background-color: #f7f4f4;
+  background-color: #F6F6F6;
 }
 
 a {
@@ -73,6 +74,9 @@ footer .footer__contend {
   color: white;
   padding: 20px;
 }
+footer .footer__contend a {
+  display: block;
+}
 footer .footer__logo {
   width: 130px;
   filter: invert(100%);
@@ -81,6 +85,9 @@ footer .footer__logo {
 }
 footer .footer__nav {
   color: white;
+}
+footer .footer__text {
+  line-height: 1.7;
 }
 
 .presentation .presentation__frame {
@@ -103,17 +110,22 @@ footer .footer__nav {
   border-top-right-radius: 30px;
   font-family: "Shrikhand", cursive;
   position: relative;
-  background-color: #f7f4f4;
+  background-color: #F6F6F6;
   width: 100%;
 }
 
 .meal {
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 35px;
 }
 .meal h2 {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: lighter;
+  border-bottom: 3px solid #99E2D0;
+  display: block;
+  width: 40px;
 }
 .meal .meal__restaurant {
   display: flex;
@@ -123,14 +135,28 @@ footer .footer__nav {
   padding: 10px 10px 20px 10px;
   margin-bottom: 10px;
   line-height: 0.5;
+  box-shadow: 0px 5px 5px #e0dddd;
+}
+.meal .meal__restaurant .meal__name {
+  font-size: bold;
 }
 .meal .meal__restaurant .meal__price {
   display: flex;
   align-items: flex-end;
+  font-weight: bold;
 }
 .meal .meal__restaurant .meal__check {
   position: absolute;
   visibility: hidden;
+}
+
+.order {
+  margin-top: 40px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.order .order__color {
+  color: white;
 }
 
 .info {
@@ -139,7 +165,8 @@ footer .footer__nav {
   margin-bottom: 20px;
 }
 .info .info__location {
-  background-color: #e2dede;
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 3px 7px rgb(168, 165, 165);
   padding: 10px;
 }
 .info .info__ico {
@@ -151,15 +178,15 @@ footer .footer__nav {
   visibility: hidden;
 }
 .info .info__city {
-  background-color: #e2dede;
-  border: 1px solid #e2dede;
+  background-color: #EAEAEA;
+  border: 1px solid #EAEAEA;
 }
 .info .info__presentation {
-  background-color: #f7f4f4;
+  background-color: #F6F6F6;
   padding: 10px 0px 50px 0px;
 }
 .info .info__title {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 26px;
   padding: 0px 60px;
 }
@@ -180,18 +207,16 @@ footer .footer__nav {
   background-color: #9356DC;
   width: 22px;
   text-align: center;
-  margin-left: -8px;
+  margin: 0px 30px 0px -8px;
 }
 .functioning .functioning__color {
   color: grey;
+  margin-right: 30px;
 }
 
 .restaurants {
   padding: 15px;
-  background-color: #f7f4f4;
-}
-.restaurants .restaurants__class {
-  display: block;
+  background-color: #F6F6F6;
 }
 .restaurants .restaurants__global {
   display: flex;
@@ -212,7 +237,7 @@ footer .footer__nav {
   margin-top: 10px;
   padding: 4px 6px 4px 6px;
   background-color: #99E2D0;
-  color: #0e634e;
+  color: #008766;
   font-weight: bold;
 }
 .restaurants .restaurants__info {
@@ -224,20 +249,17 @@ footer .footer__nav {
   border-bottom-right-radius: 20px;
   padding: 0px 15px 15px 15px;
   margin-bottom: 20px;
+  box-shadow: 0px 5px 5px #d2cfcf;
 }
 .restaurants .restaurants__body {
   line-height: 0.5;
 }
-
-.order {
-  margin-top: 30px;
-  padding-bottom: 30px;
+.restaurants .restaurants__love .love--solid {
+  visibility: hidden;
 }
-.order .order__button {
-  text-align: center;
-}
-.order .order__color {
-  color: white;
+.restaurants .restaurants__love:hover .love--solid {
+  position: absolute;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */
