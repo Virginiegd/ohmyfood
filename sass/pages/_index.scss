@@ -128,16 +128,24 @@
     }
 
     .restaurants__love {
-        .love--solid {
-            visibility: hidden;
-        }
-
+        position: relative;
+        z-index: 1;
         &:hover {
-            .love--solid {
-                position: absolute;
-                visibility: visible;
+            .restaurants__color {
+                opacity: 1;
+                background-image: linear-gradient($color-secondary, $colr-primary);
             }
         }
-    }
+        &::after {
+            position: absolute;
+            background-color: linear-gradient($color-secondary, $color-primary);
+            opacity: 0;
+            z-index: -1;
+        }
+        
+    
 
+    }
 }
+        
+  
