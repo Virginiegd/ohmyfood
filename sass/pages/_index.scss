@@ -131,21 +131,30 @@
     }
 
     .restaurants__love {
-        position: relative;
-        z-index: 1;
-        &:hover {
-            .restaurants__color {
-                opacity: 1;
-                background-image: linear-gradient($color-secondary, $color-primary);
-            }
-        }
-        &::after {
+        .restaurants__solid {
             position: absolute;
-            background-color: linear-gradient($color-secondary, $color-primary);
-            opacity: 0;
-            z-index: -1;
+            visibility: hidden;
+            transform: scale(1);
+            transition: transform 400ms;
         }
-        
+        .restaurants__regular {
+            position: relative;
+        }
+    &:hover {
+        .restaurants__regular {
+            visibility: hidden;
+        }
+        .restaurants__solid {
+            visibility: visible;
+            background:linear-gradient($color-primary,$color-secondary);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color:transparent;
+            transform: scale(1.09);
+        }
+    }    
+
+
     
 
     }

@@ -101,27 +101,71 @@ footer {
         justify-content: space-between;
         background-color: white;
         border-radius: $border-radius;
-        padding: 10px 10px 20px 10px;
+        padding: 0px 15px 15px 15px;
         margin-bottom: 10px;
         line-height: 0.5;
         box-shadow: 0px 5px 5px #e0dddd;
-        
-        .meal__name {
-            font-size: bold;
+        position: relative;
+       
+        .meal__description {
+    
+            .meal__name {
+                font-size: bold;
+            }
         }
 
         .meal__price {
             display: flex;
-            align-items: flex-end;
+            align-items:flex-end;
             font-weight: bold;
         }
-
-        .meal__check {
+            .meal__check {
+            background-color: $color-tertiary;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            height: 70px;
+            width: 0px;
             position: absolute;
-            visibility: hidden;
+            visibility:hidden;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all 0.3s linear 0s;
+            .fa-solid {
+            -webkit-transition:-webkit-transform .9s; 
+            -moz-transition:-moz-transform .9s;       
+            -o-transition:-o-transform .9s;           
+            -ms-transition:-ms-transform .9s;        
+            transition:transform .9s;
+        }
+            }
+             
+        &:hover  {
+           
+            padding-bottom: 0px;
+            padding-right: 0px;
+            .meal__check {   
+                position: relative;   
+                visibility: visible;
+                width: 15%;
+                .fa-solid {
+                -webkit-transform:rotate(360deg); 
+                -moz-transform:rotate(360deg);
+                -o-transform:rotate(360deg); 
+                -ms-transform:rotate(360deg); 
+                transform:rotate(360deg);}
+            }
+            .meal__price {
+                padding-bottom: 10px;
+            }
+            
         }
     }
-}
+        }
+    
+
 
 .order {
     margin-top: 40px;
