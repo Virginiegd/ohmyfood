@@ -52,7 +52,7 @@
     h2 {
         font-weight: bold;
     }
-
+   
     .functioning__choice {
         @extend %functioning;
     }
@@ -77,6 +77,9 @@
     .functioning__color {
         color: grey;
         margin-right: 30px;
+        & :hover {
+            color:$color-primary;
+        }
     }
 }
 
@@ -133,7 +136,7 @@
         &:hover {
             .restaurants__color {
                 opacity: 1;
-                background-image: linear-gradient($color-secondary, $colr-primary);
+                background-image: linear-gradient($color-secondary, $color-primary);
             }
         }
         &::after {

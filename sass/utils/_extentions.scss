@@ -4,7 +4,13 @@
     color: white;
     padding: 10px 30px;
     box-shadow: 0px 5px 5px #d2cfcf;
+    transform: scale(1);
+    transition: transform 400ms;
+    width: 300px;
+    display: block;
+    margin: auto;
     &:hover {
+        transform: scale(1.15);
         filter:opacity(70%) drop-shadow(0px 8px 8px #c1bcbc);
     }
 }
@@ -18,5 +24,11 @@
     padding: 15px 10px 15px 0px;
     font-weight: bold;
     box-shadow: 0px 5px 5px #e0dddd;
-    
+    transform: scale(1);
+    transition: transform 400ms;
+     &:hover {
+        transform: scale(1.02);
+        background-color: #F5EDFF;
+        }
 }
+    
