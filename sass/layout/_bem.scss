@@ -4,14 +4,16 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-            & a {
-                display: block;
-            }
+
+        & a {
+            display: block;
+        }
     }
 
     .header__arrow {
         position: relative;
         right: 70px;
+
         & a {
             display: block;
         }
@@ -28,6 +30,7 @@ footer {
         background-color: black;
         color: white;
         padding: 20px;
+
         & a {
             display: block;
         }
@@ -53,6 +56,8 @@ footer {
     .presentation__frame {
         height: 250px;
         position: relative;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 
     .presentation__img {
@@ -60,22 +65,59 @@ footer {
         position: relative;
         width: 100%;
         height: 290px;
+        
     }
 
-    .presentation__title {
+    .presentation__global {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 10px;
-        padding-left: 10px;
+
+        h1 {
+        padding-top: 15px;
+        padding-left: 15px;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         font-family: $font-title;
         position: relative;
         background-color: $color-quaternary;
         width: 100%;
+        }
+
+        .presentation__solid {
+            position: absolute;
+            right: 0px;
+            visibility: hidden;
+            transform: scale(1);
+            transition: transform 400ms;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+        .presentation__regular {
+            position: absolute;
+            right: 0;
+            padding-top: 15px;
+            padding-right: 15px;
+        }
+    &:hover {
+        cursor: pointer;
+        .presentation__regular {
+            visibility: hidden;
+        }
+        .presentation__solid {
+            visibility: visible;
+            background:linear-gradient($color-primary,$color-secondary);
+            background-clip:text;
+            -webkit-background-clip:text;
+            color:transparent;
+            transform: scale(1.09);
+            padding-right: 10px;
+        }
+    } 
+}   
+
     }
-}
+    
 
 .meal {
     padding-left: 10px;
@@ -87,6 +129,7 @@ footer {
         font-size: $font-size +2;
         font-weight: lighter;
         display: block;
+
         &::after {
             content: '';
             display: block;
@@ -101,70 +144,96 @@ footer {
         justify-content: space-between;
         background-color: white;
         border-radius: $border-radius;
-        padding: 0px 15px 15px 15px;
+        padding: 5px 15px;
         margin-bottom: 10px;
-        line-height: 0.5;
         box-shadow: 0px 5px 5px #e0dddd;
         position: relative;
-       
+        
+
         .meal__description {
-    
-            .meal__name {
+            h3 {
                 font-size: bold;
+                margin: 0;
+                
             }
         }
 
         .meal__price {
             display: flex;
-            align-items:flex-end;
+            align-items: flex-end;
             font-weight: bold;
+            transition: all 0.3s linear 0s;
+            right: 0;
+            bottom: 0;
         }
-            .meal__check {
+
+        .meal__check {
             background-color: $color-tertiary;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            height: 70px;
+            height: 60px;
             width: 0px;
             position: absolute;
-            visibility:hidden;
+            visibility: hidden;
             right: 0;
+            top: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
             transition: all 0.3s linear 0s;
+
             .fa-solid {
-            -webkit-transition:-webkit-transform .9s; 
-            -moz-transition:-moz-transform .9s;       
-            -o-transition:-o-transform .9s;           
-            -ms-transition:-ms-transform .9s;        
-            transition:transform .9s;
+                -webkit-transition: -webkit-transform .9s;
+                -moz-transition: -moz-transform .9s;
+                -o-transition: -o-transform .9s;
+                -ms-transition: -ms-transform .9s;
+                transition: transform .9s;
+            }
         }
-            }
-             
-        &:hover  {
-           
+
+        &:hover {
+            cursor: pointer;
             padding-bottom: 0px;
+            padding-top: 0px;
             padding-right: 0px;
-            .meal__check {   
-                position: relative;   
+
+            h3 {
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .meal__detail {
+                width: 200px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .meal__check {
                 visibility: visible;
-                width: 15%;
+                position: relative;
+                width: 70px;
+
                 .fa-solid {
-                -webkit-transform:rotate(360deg); 
-                -moz-transform:rotate(360deg);
-                -o-transform:rotate(360deg); 
-                -ms-transform:rotate(360deg); 
-                transform:rotate(360deg);}
+                    -webkit-transform: rotate(360deg);
+                    -moz-transform: rotate(360deg);
+                    -o-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
             }
+
             .meal__price {
-                padding-bottom: 10px;
+                margin-left:10px ;
+                width: 70px;
             }
-            
         }
     }
-        }
-    
+}
+
 
 
 .order {
@@ -172,7 +241,7 @@ footer {
     padding-bottom: 70px;
     text-align: center;
 
-    .order__button{
+    .order__button {
         @extend %button;
     }
 

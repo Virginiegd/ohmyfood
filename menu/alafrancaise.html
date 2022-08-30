@@ -45,7 +45,11 @@
                 <div class="presentation__frame">
                     <img class="presentation__img" src="../img/restaurants/alafrancaise.jpg" alt="A la française">
                 </div>
-                <div class="presentation__title"><h1>À la française </h1> <i class="fa-regular fa-heart fa-2x"></i></div>
+                <div class="presentation__global">
+                    <h1>À la française </h1> 
+                    <span class="presentation__solid"><i class="fa-solid fa-heart fa-2x"></i></span> 
+                    <span class="presentation__regular"><i class="fa-regular fa-heart fa-2x"></i></span> 
+                </div>
             </section>
 
             <!--Article 1-->
@@ -53,32 +57,32 @@
             <article class="meal">
                 <h2>Entrées</h2>
                 <div class="meal__global">
-                    <div class="meal__restaurant">
+                    <ul class="meal__restaurant">
                         <ul class="meal__description">
                             <li class="meal__name"><h3>Tartare de poulpe acidulé</h3></li>
                             <li class="meal__detail">Aux zestes d'orange</li>
                         </ul>
                         <span class="meal__price">25€</span>
                         <span class="meal__check"><i class="fa-solid fa-circle-check fa-2x"></i></span>
-                    </div>
+                    </ul>
                     
-                    <ul class="meal__restaurant">
-                        <ul class="meal__description">
-                            <li class="meal__name"><h3>Velouté de légumes d'antan</h3></li>
-                            <li class="meal__detail">Carotte, panais, topinambour</li>
-                        </ul>
+                    <div class="meal__restaurant">
+                        <div class="meal__description">
+                            <h3 class="meal__name">Velouté de légumes d'antan</h3></li>
+                            <p class="meal__detail">Carotte, panais, topinambour</p>
+                        </div>
                         <span class="meal__price">35€</span>
                         <span class="meal__check"><i class="fa-solid fa-circle-check fa-2x"></i></span>
-                    </ul>
+                    </div>
 
-                    <ul class="meal__restaurant">
-                        <ul class="meal__description">
-                            <li class="meal__name"><h3>Soupe à l'oignon</h3></li>
-                            <li class="meal__detail">Revisitée</li>
-                        </ul>
+                    <div class="meal__restaurant">
+                        <div class="meal__description">
+                            <h3 class="meal__name">Soupe à l'oignon</h3>
+                            <p class="meal__detail">Revisitée</p>
+                        </div>
                         <span class="meal__price">20€</span>
                         <span class="meal__check"><i class="fa-solid fa-circle-check fa-2x"></i></span>
-                    </ul>
+                    </div>
                 </div>
             </article>
 
