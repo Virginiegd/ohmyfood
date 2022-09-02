@@ -1,41 +1,50 @@
 .loader {
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    position:fixed;
+    margin-top:90px;
     inset: 0;
     opacity:0;
     animation:5s 
     hide 1;
-    position: relative;
-    /*width: 100%;*/
     
     .loader__img {
-        /*width: 100%;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         z-index: 1;
-        margin-left: 400px;
-        margin-top: 130px;
-        img {
-        width: 100%;
-        }
+        width: 40%;
     }
     
     .loader__text {
-        position: absolute;
+        width: 100%;
+        display: flex;
+       justify-content: center;
+       align-items: center;
+        .loader__animation {
+        position: relative;
         z-index: 2;
-        margin-left: 220px;
-        margin-top: 110px;
         font-family: $font-title;
-        font-size: $font-size +70;
+        font-size: $font-size +60;
         background:linear-gradient($color-secondary,$color-primary);
         background-clip:text;
         -webkit-background-clip:text;
         color:transparent;
-        }
+        -webkit-animation: loader 800ms linear;
+        animation: loader 800ms linear 300ms; 
     }
+    }  
+        }
 
+    
 
-    .container--index {
-        opacity:1;
-        animation :show 5s 1;
+.container--index {
+    opacity:1;
+    animation :show 5s 1;
     }
 
 .info {
@@ -66,7 +75,7 @@
 
     .info__presentation {
         background-color: $color-quaternary;
-        padding: 10px 0px 50px 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     .info__title {
@@ -77,17 +86,12 @@
 
     .info__text {
         font-size: $font-size +2;
-        margin-bottom: 30px;
         padding: 0px 20px;
-    }
-
-    .info__button {
-        @extend %button;
-    }
+    } 
 }
 
 .functioning {
-    padding: 20px 30px;
+    padding: 10px 24px 20px 30px;
 
     h2 {
         font-weight: bold;
@@ -107,21 +111,7 @@
     .functioning__taste {
         @extend %functioning;
         @extend %functioning-hover;
-    }
-
-    .functioning__number {
-        color: white;
-        border-radius: $border-radius;
-        background-color: $color-primary;
-        width: 22px;
-        text-align: center;
-        margin: 0px 30px 0px -8px;
-    }
-
-    .functioning__color {
-        color: grey;
-        margin-right: 30px;
-    }
+    } 
 }
 
 .restaurants {
@@ -198,5 +188,3 @@
 
     }
 }
-        
-  
