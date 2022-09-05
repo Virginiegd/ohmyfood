@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60%;
     position:fixed;
     margin-top:90px;
+    margin-bottom: 120px;
     inset: 0;
     opacity:0;
     animation:5s 
@@ -16,18 +16,16 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        z-index: 1;
         width: 40%;
     }
     
     .loader__text {
         width: 100%;
         display: flex;
-       justify-content: center;
-       align-items: center;
-        .loader__animation {
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
         position: relative;
-        z-index: 2;
         font-family: $font-title;
         font-size: $font-size +60;
         background:linear-gradient($color-secondary,$color-primary);
@@ -35,13 +33,10 @@
         -webkit-background-clip:text;
         color:transparent;
         -webkit-animation: loader 800ms linear;
-        animation: loader 800ms linear 300ms; 
-    }
-    }  
+        animation: show loader 800ms linear 300ms; 
         }
-
-    
-
+    }  
+        
 .container--index {
     opacity:1;
     animation :show 5s 1;
@@ -100,23 +95,36 @@
     .functioning__choice {
         @extend %functioning;
         @extend %functioning-hover;
-       
+        a {
+            display: block;
+        }
     }
 
     .functioning__compose {
         @extend %functioning;
         @extend %functioning-hover;
+        a {
+            display: block;
+        }
     }
 
     .functioning__taste {
         @extend %functioning;
         @extend %functioning-hover;
+        a {
+            display: block;
+        }
     } 
 }
 
 .restaurants {
     padding: 15px;
     background-color: $color-quaternary;
+
+    .restaurants__card {
+        a {
+            display: block;
+        }
 
    
 
@@ -187,4 +195,5 @@
     }    
 
     }
+}
 }
