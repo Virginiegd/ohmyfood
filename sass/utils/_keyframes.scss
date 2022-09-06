@@ -1,5 +1,4 @@
 @keyframes hide {
-
   0%,
   80% {
     opacity: 1;
@@ -11,7 +10,6 @@
 }
 
 @keyframes show {
-
   0%,
   80% {
     opacity: 0;
@@ -38,7 +36,6 @@
 }
 
 @keyframes loader {
-
   0%,
   20% {
     letter-spacing: -0.5em;
@@ -121,8 +118,8 @@
 
 @keyframes slidebottom {
   0% {
-    -webkit-transform: translateY(1000px);
-            transform: translateY(1000px);
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     opacity: 0;
   }
   100% {

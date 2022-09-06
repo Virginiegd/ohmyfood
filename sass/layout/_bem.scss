@@ -45,6 +45,7 @@ footer {
 
     .footer__nav {
         color: white;
+        display: block;
     }
 
     .footer__text {
@@ -117,7 +118,6 @@ footer {
         }
     }
 }
-
 
 .meal {
     padding-left: 10px;
@@ -196,8 +196,7 @@ footer {
                 }
             }
 
-            &:hover,
-            &:active {
+            &:hover {
                 cursor: pointer;
 
                 .meal__description {
@@ -229,8 +228,6 @@ footer {
                         .fa-solid {
                             -webkit-transform: rotate(360deg);
                             -moz-transform: rotate(360deg);
-                            -o-transform: rotate(360deg);
-                            -ms-transform: rotate(360deg);
                             transform: rotate(360deg);
                         }
                     }
