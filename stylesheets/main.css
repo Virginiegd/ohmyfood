@@ -88,13 +88,15 @@ header .header__contend {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 header .header__contend a {
   display: block;
 }
 header .header__arrow {
-  position: relative;
-  right: 70px;
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
 }
 header .header__arrow a {
   display: block;
@@ -281,24 +283,24 @@ footer .footer__text {
 .meal .meal__global .meal__restaurant:hover .meal__choice .meal__price {
   width: 100px;
 }
-.meal .meal__global h2:nth-of-type(1) {
-  -webkit-animation: slidebottom 1s linear;
-  animation: slidebottom 1s linear;
-}
 .meal .meal__global .meal__restaurant:nth-of-type(1) {
   -webkit-animation: fade-in-bottom 1s linear;
   animation: fade-in-bottom 1s linear;
-  animation-delay: 0.3s;
 }
 .meal .meal__global .meal__restaurant:nth-of-type(2) {
   -webkit-animation: fade-in-bottom 1s linear;
   animation: fade-in-bottom 1s linear;
-  animation-delay: 0.6s;
+  animation-delay: 0.1s;
 }
 .meal .meal__global .meal__restaurant:nth-of-type(3) {
   -webkit-animation: fade-in-bottom 1s linear;
   animation: fade-in-bottom 1s linear;
-  animation-delay: 0.9s;
+  animation-delay: 0.2s;
+}
+.meal .meal__global .meal__restaurant:nth-of-type(4) {
+  -webkit-animation: fade-in-bottom 1s linear;
+  animation: fade-in-bottom 1s linear;
+  animation-delay: 0.3s;
 }
 
 .order {
@@ -408,6 +410,7 @@ footer .footer__text {
 }
 .restaurants .restaurants__card a {
   display: block;
+  width: 100%;
 }
 .restaurants .restaurants__card .restaurants__global {
   display: flex;
@@ -475,15 +478,22 @@ footer .footer__text {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .restaurants .restaurants__card a {
+    width: 45%;
+  }
   .restaurants .restaurants__card .restaurants__global {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   .restaurants .restaurants__card .restaurants__global .restaurants__img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
     display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  .loader .loader__img {
+    width: 40%;
   }
 }
 @keyframes hide {
@@ -568,30 +578,6 @@ footer .footer__text {
   0% {
     -webkit-transform: translateY(25px);
     transform: translateY(25px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slidebottom {
-  0% {
-    -webkit-transform: translateY(1000px);
-    transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slidebottom {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
     opacity: 0;
   }
   100% {
