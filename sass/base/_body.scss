@@ -15,7 +15,7 @@ img {
 }
 
 .hide {
-    margin: none;
+    margin: 0px;
 }
 
 .container--menu {
@@ -31,6 +31,10 @@ ul {
     list-style-type: none;
     margin: 0px;
     padding: 0px;
+}
+
+p {
+    margin: 0px;
 }
 
 

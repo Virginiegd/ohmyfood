@@ -16,7 +16,7 @@
 
 %functioning {
     display: flex;
-    align-content: flex-start;
+    /*align-content: flex-start;*/
     background-color: $color-quaternary;
     border-radius: $border-radius;
     margin-bottom: 20px;
@@ -30,9 +30,10 @@
         color: white;
         border-radius: $border-radius;
         background-color: $color-primary;
-        width: 22px;
+        min-width: 22px;
+        height: 22px;
         text-align: center;
-        margin: 0px 30px 0px -8px;
+        margin: 0px 20px 0px -8px;
     }
 
     .functioning__color {
@@ -53,4 +54,13 @@
         }
 }
 
-    
+%ellipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+%menuappearance {
+    -webkit-animation: menu 1s linear;
+    animation: menu 1s linear;
+}
