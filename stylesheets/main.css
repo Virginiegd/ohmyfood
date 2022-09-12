@@ -551,14 +551,17 @@ footer .footer__text {
     text-align: center;
   }
 }
+/*End Tablette*/
 /*Desktop */
 @media screen and (min-width: 992px) {
+  /*Loader*/
   .loader .loader__img {
     width: 500px;
   }
   .loader .loader__text {
     font-size: 76px;
   }
+  /*Information + Functioning */
   .index__presentation {
     display: flex;
     width: 100%;
@@ -601,6 +604,7 @@ footer .footer__text {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  /*Restaurants*/
   .restaurants {
     padding-left: 20px;
     padding-right: 20px;
@@ -624,6 +628,7 @@ footer .footer__text {
     width: 100%;
   }
 }
+/*End Desktop*/
 @keyframes hide {
   0%, 80% {
     opacity: 1;

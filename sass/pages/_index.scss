@@ -17,6 +17,7 @@
         align-items: center;
         position: absolute;
         width: 250px;
+
         img {
             width: 100%;
         }
@@ -31,7 +32,7 @@
         position: relative;
         font-family: $font-title;
         font-size: $font-size +20;
-        background: linear-gradient(45deg, $color-secondary,60%, $color-primary);
+        background: linear-gradient(45deg, $color-secondary, 60%, $color-primary);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -226,14 +227,15 @@
 /* Tablette */
 
 @media screen and (min-width:768px) {
-    
+
     /*Loader*/
-    
+
     .loader {
         .loader__img {
             width: 400px;
         }
-        .loader__text{
+
+        .loader__text {
             font-size: $font-size +40;
         }
     }
@@ -243,20 +245,24 @@
     .restaurants {
         padding-left: 30px;
         padding-right: 30px;
+
         h2 {
             text-align: center;
-            background: -webkit-linear-gradient(45deg ,$color-secondary, $color-primary);
+            background: -webkit-linear-gradient(45deg, $color-secondary, $color-primary);
             color: $color-white;
             border-radius: 20px;
             margin-top: 0px;
         }
+
         .restaurants__card {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+
             a {
                 width: 48%;
             }
+
             .restaurants__global {
                 display: flex;
                 justify-content: space-between;
@@ -273,22 +279,30 @@
 
     footer {
         .footer__contend {
-            text-align:center;
-    }
+            text-align: center;
+        }
     }
 }
+
+/*End Tablette*/
 
 /*Desktop */
 
 @media screen and (min-width: 992px) {
+
+    /*Loader*/
+
     .loader {
         .loader__img {
             width: 500px;
         }
-        .loader__text{
+
+        .loader__text {
             font-size: $font-size +60;
         }
     }
+
+    /*Information + Functioning */
 
     .index__presentation {
         display: flex;
@@ -298,10 +312,11 @@
 
         .info {
             width: 100%;
+
             .info__location {
                 width: 100%;
             }
-        
+
             .info__presentation {
                 width: 45%;
                 margin-top: 20px;
@@ -329,39 +344,43 @@
             margin-top: 60px;
             right: 0;
             background-color: $color-white;
-           
+
             h2 {
                 text-align: center;
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-    }
-}
-
-.restaurants {
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    .restaurants__card {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        a {
-            width: 25%;
         }
+    }
 
-        .restaurants__global {
+    /*Restaurants*/
+
+    .restaurants {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .restaurants__card {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-left: 8px;
-            margin-right: 8px;
 
-            .restaurants__img {
-                width: 100%;
+            a {
+                width: 25%;
+            }
+
+            .restaurants__global {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-left: 8px;
+                margin-right: 8px;
+
+                .restaurants__img {
+                    width: 100%;
+                }
             }
         }
     }
 }
-}
+
+/*End Desktop*/
