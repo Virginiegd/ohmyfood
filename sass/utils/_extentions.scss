@@ -39,18 +39,15 @@
         color: grey;
         margin-right: 30px;
     }
-}
 
-%functioning-hover {
-   
-        &:hover {
-            cursor: pointer;
-                transform: scale(1.01);
-                background-color: #F5EDFF;
-                .functioning__color {
-                    color:$color-primary;
-                }
-        }
+    &:hover {
+        cursor: pointer;
+            transform: scale(1.01);
+            background-color: #F5EDFF;
+            .functioning__color {
+                color:$color-primary;
+            }
+    }
 }
 
 %ellipse {

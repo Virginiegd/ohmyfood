@@ -107,7 +107,6 @@
 
     .functioning__choice {
         @extend %functioning;
-        @extend %functioning-hover;
 
         a {
             display: block;
@@ -116,7 +115,6 @@
 
     .functioning__compose {
         @extend %functioning;
-        @extend %functioning-hover;
 
         a {
             display: block;
@@ -125,7 +123,6 @@
 
     .functioning__taste {
         @extend %functioning;
-        @extend %functioning-hover;
 
         a {
             display: block;

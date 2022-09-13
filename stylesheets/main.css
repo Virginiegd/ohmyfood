@@ -38,7 +38,6 @@
   color: grey;
   margin-right: 30px;
 }
-
 .functioning .functioning__taste:hover, .functioning .functioning__compose:hover, .functioning .functioning__choice:hover {
   cursor: pointer;
   transform: scale(1.01);
