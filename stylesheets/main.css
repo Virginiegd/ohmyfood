@@ -16,7 +16,6 @@
 
 .functioning .functioning__taste, .functioning .functioning__compose, .functioning .functioning__choice {
   display: flex;
-  /*align-content: flex-start;*/
   background-color: #F6F6F6;
   border-radius: 20px;
   margin-bottom: 20px;
