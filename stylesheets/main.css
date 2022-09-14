@@ -14,7 +14,7 @@
   filter: opacity(70%) drop-shadow(0px 8px 8px #c1bcbc);
 }
 
-.functioning .functioning__taste, .functioning .functioning__compose, .functioning .functioning__choice {
+.info .infofunctioning .functioning .functioning__global .functioning__taste, .info .infofunctioning .functioning .functioning__global .functioning__compose, .info .infofunctioning .functioning .functioning__global .functioning__choice {
   display: flex;
   background-color: #F6F6F6;
   border-radius: 20px;
@@ -25,7 +25,7 @@
   transform: scale(1);
   transition: transform 400ms;
 }
-.functioning .functioning__taste .functioning__number, .functioning .functioning__compose .functioning__number, .functioning .functioning__choice .functioning__number {
+.info .infofunctioning .functioning .functioning__global .functioning__taste .functioning__number, .info .infofunctioning .functioning .functioning__global .functioning__compose .functioning__number, .info .infofunctioning .functioning .functioning__global .functioning__choice .functioning__number {
   color: white;
   border-radius: 20px;
   background-color: #9356DC;
@@ -34,16 +34,16 @@
   text-align: center;
   margin: 0px 20px 0px -8px;
 }
-.functioning .functioning__taste .functioning__color, .functioning .functioning__compose .functioning__color, .functioning .functioning__choice .functioning__color {
+.info .infofunctioning .functioning .functioning__global .functioning__taste .functioning__color, .info .infofunctioning .functioning .functioning__global .functioning__compose .functioning__color, .info .infofunctioning .functioning .functioning__global .functioning__choice .functioning__color {
   color: grey;
   margin-right: 30px;
 }
-.functioning .functioning__taste:hover, .functioning .functioning__compose:hover, .functioning .functioning__choice:hover {
+.info .infofunctioning .functioning .functioning__global .functioning__taste:hover, .info .infofunctioning .functioning .functioning__global .functioning__compose:hover, .info .infofunctioning .functioning .functioning__global .functioning__choice:hover {
   cursor: pointer;
   transform: scale(1.01);
   background-color: #F5EDFF;
 }
-.functioning .functioning__taste:hover .functioning__color, .functioning .functioning__compose:hover .functioning__color, .functioning .functioning__choice:hover .functioning__color {
+.info .infofunctioning .functioning .functioning__global .functioning__taste:hover .functioning__color, .info .infofunctioning .functioning .functioning__global .functioning__compose:hover .functioning__color, .info .infofunctioning .functioning .functioning__global .functioning__choice:hover .functioning__color {
   color: #9356DC;
 }
 
@@ -105,18 +105,18 @@ header .header__contend {
   justify-content: center;
   position: relative;
 }
-header .header__contend a {
-  display: block;
-}
-header .header__arrow {
+header .header__contend .header__arrow {
   position: absolute;
   left: 0;
   margin-left: 10px;
 }
-header .header__arrow a {
+header .header__contend .header__arrow a {
   display: block;
 }
-header .header__logo {
+header .header__contend a {
+  display: block;
+}
+header .header__contend .header__logo {
   width: 250px;
   margin: 10px 10px;
 }
@@ -129,22 +129,23 @@ footer .footer__contend {
 footer .footer__contend a {
   display: block;
 }
-footer .footer__logo {
+footer .footer__contend a .footer__logo {
   width: 130px;
   filter: invert(100%);
   margin-top: 10px;
   margin-bottom: 10px;
 }
-footer .footer__nav {
-  color: white;
-  display: block;
-}
-footer .footer__text {
+footer .footer__contend .footer__text {
   line-height: 1.7;
 }
+footer .footer__contend .footer__text .footer__nav {
+  color: white;
+}
+footer .footer__contend .footer__text .footer__nav a {
+  display: block;
+}
 
-/*End Footer + Header */
-/*Header Page menu*/
+/*Section 1*/
 .presentation {
   position: relative;
 }
@@ -152,7 +153,7 @@ footer .footer__text {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
-.presentation .presentation__img {
+.presentation .presentation__frame .presentation__img {
   object-fit: cover;
   width: 100%;
   height: 290px;
@@ -196,19 +197,18 @@ footer .footer__text {
   transform: scale(1.09);
 }
 
-/*End Header Page menu */
-/*Menu*/
+/*Articles*/
 .meal {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 35px;
 }
-.meal h2 {
+.meal .meal__global h2 {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: lighter;
 }
-.meal h2::after {
+.meal .meal__global h2::after {
   content: "";
   display: block;
   width: 50px;
@@ -308,10 +308,9 @@ footer .footer__text {
   margin-bottom: 50px;
 }
 
-/*End Menu*/
 /* Tablette */
 @media screen and (min-width: 768px) {
-  /*Header Page menu*/
+  /*Section 1*/
   .presentation .presentation__global {
     display: flex;
     justify-content: center;
@@ -320,7 +319,7 @@ footer .footer__text {
   .presentation .presentation__global h1 {
     margin-right: 40px;
   }
-  /*Menu*/
+  /*Articles*/
   .menu {
     display: flex;
     justify-content: space-around;
@@ -329,8 +328,11 @@ footer .footer__text {
   .menu .meal {
     width: 380px;
   }
+  /*Footer*/
+  footer .footer__contend {
+    text-align: center;
+  }
 }
-/*End Tablette*/
 /* Desktop */
 @media screen and (min-width: 992px) {
   /*Menu*/
@@ -338,8 +340,7 @@ footer .footer__text {
     width: 400px;
   }
 }
-/*End Desktop*/
-/*Loader */
+/*Loader*/
 .loader {
   display: flex;
   justify-content: center;
@@ -384,64 +385,64 @@ footer .footer__text {
 }
 
 /*End Loader */
-/* Information */
 .info {
   text-align: center;
   font-family: "Roboto", sans-serif;
-  margin-bottom: 20px;
+  /*Form*/
 }
 .info .info__location {
   background-color: #EAEAEA;
   box-shadow: inset 0px 3px 7px rgb(168, 165, 165);
   padding: 10px;
 }
-.info .info__ico {
+.info .info__location .info__ico {
   padding: 30px;
   width: 10%;
 }
-.info .info__help {
+.info .info__location .info__help {
   position: absolute;
   visibility: hidden;
 }
-.info .info__city {
+.info .info__location .info__city {
   background-color: #EAEAEA;
   border: 1px solid #EAEAEA;
 }
-.info .info__presentation {
+.info .infofunctioning {
+  margin-bottom: 20px;
+  /*Section 1*/
+  /*Section 2*/
+}
+.info .infofunctioning .info__presentation {
   background-color: #F6F6F6;
   padding: 10px 0px 0px 0px;
 }
-.info .info__title {
+.info .infofunctioning .info__presentation .info__global .info__title {
   font-weight: bolder;
   font-size: 26px;
   padding: 0px 60px;
 }
-.info .info__text {
+.info .infofunctioning .info__presentation .info__global .info__text {
   font-size: 18px;
   padding: 0px 20px;
   margin-bottom: 20px;
 }
-
-/*End Information */
-/*Functioning*/
-.functioning {
+.info .infofunctioning .functioning {
   padding: 10px 24px 20px 30px;
 }
-.functioning h2 {
+.info .infofunctioning .functioning h2 {
   font-weight: bold;
 }
-.functioning .functioning__choice a {
+.info .infofunctioning .functioning .functioning__global .functioning__choice a {
   display: block;
 }
-.functioning .functioning__compose a {
+.info .infofunctioning .functioning .functioning__global .functioning__compose a {
   display: block;
 }
-.functioning .functioning__taste a {
+.info .infofunctioning .functioning .functioning__global .functioning__taste a {
   display: block;
 }
 
-/*End Functioning*/
-/*Restaurants*/
+/*Section 3*/
 .restaurants {
   padding: 15px 15px;
   background-color: #F6F6F6;
@@ -451,12 +452,12 @@ footer .footer__text {
   display: block;
   width: 100%;
 }
-.restaurants .restaurants__card .restaurants__global {
+.restaurants .restaurants__card a .restaurants__global {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__img {
+.restaurants .restaurants__card a .restaurants__global .restaurants__img {
   width: 100%;
   height: 200px;
   border-top-left-radius: 20px;
@@ -464,7 +465,7 @@ footer .footer__text {
   object-fit: cover;
   display: block;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__new {
+.restaurants .restaurants__card a .restaurants__global .restaurants__new {
   position: absolute;
   right: 30px;
   margin-top: 10px;
@@ -473,7 +474,7 @@ footer .footer__text {
   color: #008766;
   font-weight: bold;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__info {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -484,25 +485,25 @@ footer .footer__text {
   margin-bottom: 20px;
   box-shadow: 0px 5px 5px #d2cfcf;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__body {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__body {
   line-height: 0.5;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__love .restaurants__solid {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__love .restaurants__solid {
   position: absolute;
   visibility: hidden;
   transform: scale(1);
   transition: transform 400ms;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__love .restaurants__regular {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__love .restaurants__regular {
   position: relative;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__love:hover {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__love:hover {
   cursor: pointer;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__love:hover .restaurants__regular {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__love:hover .restaurants__regular {
   visibility: hidden;
 }
-.restaurants .restaurants__card .restaurants__global .restaurants__love:hover .restaurants__solid {
+.restaurants .restaurants__card a .restaurants__global .restaurants__info .restaurants__love:hover .restaurants__solid {
   visibility: visible;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -511,7 +512,6 @@ footer .footer__text {
   transform: scale(1.09);
 }
 
-/*End Restaurants */
 /* Tablette */
 @media screen and (min-width: 768px) {
   /*Loader*/
@@ -521,7 +521,7 @@ footer .footer__text {
   .loader .loader__text {
     font-size: 56px;
   }
-  /*Restaurants*/
+  /*Section 3*/
   .restaurants {
     padding-left: 30px;
     padding-right: 30px;
@@ -541,20 +541,15 @@ footer .footer__text {
   .restaurants .restaurants__card a {
     width: 48%;
   }
-  .restaurants .restaurants__card .restaurants__global {
+  .restaurants .restaurants__card a .restaurants__global {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .restaurants .restaurants__card .restaurants__global .restaurants__img {
+  .restaurants .restaurants__card a .restaurants__global .restaurants__img {
     width: 100%;
   }
-  /*Footer*/
-  footer .footer__contend {
-    text-align: center;
-  }
 }
-/*End Tablette*/
 /*Desktop */
 @media screen and (min-width: 992px) {
   /*Loader*/
@@ -564,20 +559,24 @@ footer .footer__text {
   .loader .loader__text {
     font-size: 76px;
   }
-  /*Information + Functioning */
-  .index__presentation {
-    display: flex;
+  .info {
     width: 100%;
-    position: relative;
     background-color: #F6F6F6;
+    padding-bottom: 20px;
+    /*Form*/
+    /*Section 2*/
   }
-  .index__presentation .info {
+  .info .info__location {
     width: 100%;
   }
-  .index__presentation .info .info__location {
+  .info .infofunctioning {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0px;
+    /*Section 1*/
   }
-  .index__presentation .info .info__presentation {
+  .info .infofunctioning .info__presentation {
     width: 45%;
     margin-top: 20px;
     margin-left: 30px;
@@ -586,28 +585,26 @@ footer .footer__text {
     padding-left: 40px;
     padding-right: 40px;
   }
-  .index__presentation .info .info__presentation .info__title {
+  .info .infofunctioning .info__presentation .info__global .info__title {
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
   }
-  .index__presentation .functioning {
-    position: absolute;
+  .info .functioning {
     margin-right: 20px;
     width: 45%;
     padding-top: 0px;
     padding-bottom: 15px;
     border-radius: 50px;
-    margin-top: 60px;
-    right: 0;
     background-color: white;
+    margin-top: 20px;
   }
-  .index__presentation .functioning h2 {
+  .info .functioning h2 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  /*Restaurants*/
+  /*Section 3*/
   .restaurants {
     padding-left: 20px;
     padding-right: 20px;
@@ -620,18 +617,17 @@ footer .footer__text {
   .restaurants .restaurants__card a {
     width: 25%;
   }
-  .restaurants .restaurants__card .restaurants__global {
+  .restaurants .restaurants__card a .restaurants__global {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 8px;
     margin-right: 8px;
   }
-  .restaurants .restaurants__card .restaurants__global .restaurants__img {
+  .restaurants .restaurants__card a .restaurants__global .restaurants__img {
     width: 100%;
   }
 }
-/*End Desktop*/
 @keyframes hide {
   0%, 80% {
     opacity: 1;
