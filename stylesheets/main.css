@@ -170,6 +170,7 @@ footer .footer__text {
 }
 .presentation .presentation__global h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 26px;
 }
 .presentation .presentation__global .presentation__love .presentation__solid {
   position: absolute;
@@ -231,6 +232,10 @@ footer .footer__text {
 }
 .meal .meal__global .meal__restaurant .meal__card .meal__description .meal__name {
   margin: 0px;
+  font-size: 18px;
+}
+.meal .meal__global .meal__restaurant .meal__card .meal__description .meal__detail {
+  font-size: 14px;
 }
 .meal .meal__global .meal__restaurant .meal__card .meal__choice {
   display: flex;
