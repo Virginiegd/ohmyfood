@@ -12,6 +12,7 @@ header {
             position: absolute;
             left: 0;
             margin-left: 10px;
+
             a {
                 display: block;
             }
@@ -42,16 +43,17 @@ footer {
                 filter: invert(100%);
                 margin-top: 10px;
                 margin-bottom: 10px;
-            }  
-        }      
+            }
+        }
 
         .footer__text {
             line-height: 1.7;
 
             .footer__nav {
-            color: $color-white;
+                color: $color-white;
+
                 a {
-                display: block;
+                    display: block;
                 }
             }
         }

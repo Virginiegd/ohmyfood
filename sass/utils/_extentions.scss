@@ -1,16 +1,17 @@
 %button {
     display: inline-block;
-    background: linear-gradient($color-secondary,$color-primary);
+    background: linear-gradient($color-secondary, $color-primary);
     border-radius: $border-radius;
     color: white;
     padding: 10px 30px;
     box-shadow: 0px 5px 5px #d2cfcf;
     transform: scale(1);
     transition: transform 400ms;
+
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
-        filter:opacity(70%) drop-shadow(0px 8px 8px #c1bcbc);
+        filter: opacity(70%) drop-shadow(0px 8px 8px #c1bcbc);
     }
 }
 
@@ -42,11 +43,12 @@
 
     &:hover {
         cursor: pointer;
-            transform: scale(1.01);
-            background-color: #F5EDFF;
-            .functioning__color {
-                color:$color-primary;
-            }
+        transform: scale(1.01);
+        background-color: #F5EDFF;
+
+        .functioning__color {
+            color: $color-primary;
+        }
     }
 }
 
